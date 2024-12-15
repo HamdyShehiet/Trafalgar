@@ -65,7 +65,11 @@ img{
 .alt-text-color{color: var(--alt-text-color);}
 
 h1{font-size: var(--h1-size);}
-h2{font-size: var(--h2-size);}
+h2{
+    position: relative;
+    font-size: var(--h2-size);
+    padding: 10px;
+}
 h3{font-size: var(--h3-size);}
 h4{font-size: var(--h4-size);}
 .text-size{font-size: var(--text-size);}
@@ -73,11 +77,12 @@ h4{font-size: var(--h4-size);}
 .text-center{text-align: center;}
 
 .underline::before{
+    content: "";
     position: absolute;
     bottom: 0;
-    width: 30px;
-    height: 3px;
-    margin: 0 auto;
+    right: 50%;
+    width: 50px;
+    height: 2px;
     background-color: var(--title-color);
 }
 section{
@@ -85,6 +90,7 @@ section{
 }
 .flex{
     display: flex;
+    justify-content: center;
 }
 .grid{
     display: grid;
@@ -93,6 +99,7 @@ header{
     position: sticky;
     top: 0;
     right: 0;
+    z-index: 100;
     width: 100%;
     padding: 25px 0;
 }
@@ -137,8 +144,8 @@ header .container .logo a span:first-child{
     }
     header .container nav ul a{
         display: block;
-        margin: 10px 0;
-        color: var(--title-color);
+        margin: 15px 0;
+        color: var(--alt-text-color);
     }
     header .container nav input:checked ~ ul{
         display: block;
@@ -165,11 +172,10 @@ header .container .logo a span:first-child{
 }
 section .container{
     align-items: center;
-    justify-content: center;
     gap: 60px;
 }
 section .container  p.description{
-    margin: 20px 0;
+    margin: 25px 0;
     line-height: 1.5;
 }
 @media (min-width:992px) {
@@ -183,6 +189,23 @@ section .container  p.description{
     flex-direction: column;
 }
 }
-/* .services .container .services-list{
-    background-color: brown;
-} */
+.services {
+    position: relative;
+}
+.services .container .services-list{
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.services .container .services-list .service{
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(0 0 0 /0.08);
+    background-color: var(--alt-text-color);
+}
+.services .container >.blob-image{
+    position: absolute;
+    left: 0;
+    top:25%;
+    z-index: -1;
+}
