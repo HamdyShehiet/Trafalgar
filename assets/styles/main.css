@@ -74,7 +74,7 @@ header{
     position: fixed;
     width: 100%;
     padding: 25px 0;
-    /* background-color: aqua; */
+    background-color: aqua;
 }
 header .container{
     justify-content: space-between;
@@ -106,7 +106,7 @@ header .container .logo a span:last-child{
     header .container nav ul{
         display: none;
         position: absolute;
-        top: 50px;
+        top: 60px;
         right:0;
         width: 200px;
         text-align: center;
