@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 :root {
-    --main-color: #458FF6;
+    --bg-color: #458FF6;
+    --alt-text-color: #ffffff;
     --title-color: #000000;
     --text-color: #7D7987;
-    --alt-text-color: #ffffff;
     --h1-size: 48px;
     --h2-size: 36px;
     --h3-size: 24px;
@@ -44,37 +44,42 @@ img{
     margin: auto;
 }
 @media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
-  }
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-  }
-.main-color{background-color: var(--main-color);}
+.container {
+    width: 750px;
+}
+}
+@media (min-width: 992px) {
+.container {
+    width: 970px;
+}
+}
+@media (min-width: 1200px) {
+.container {
+    width: 1170px;
+}
+}
+.bg-color{background-color: var(--bg-color);}
+
 .title-color{color: var(--title-color);}
 .text-color{color: var(--text-color);}
 .alt-text-color{color: var(--alt-text-color);}
-h1{
-    font-size: var(--h1-size);
-}
-h2{
-    font-size: var(--h2-size);
-}
-h3{
-    font-size: var(--h3-size);
-}
-h4{
-    font-size: var(--h4-size);
-}
+
+h1{font-size: var(--h1-size);}
+h2{font-size: var(--h2-size);}
+h3{font-size: var(--h3-size);}
+h4{font-size: var(--h4-size);}
 .text-size{font-size: var(--text-size);}
+
+.text-center{text-align: center;}
+
+.underline::before{
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: var(--title-color);
+}
 section{
     padding: 60px 0;
 }
@@ -102,7 +107,6 @@ header .container{
     align-items: center;
 }
 header .container .logo a{
-    display: flex;
     align-items: center;
     gap: 15px;
     font-size: var(--h4-size);
@@ -164,7 +168,7 @@ section .container{
     justify-content: center;
     gap: 60px;
 }
-section .container .info p{
+section .container  p.description{
     margin: 20px 0;
     line-height: 1.5;
 }
@@ -179,3 +183,6 @@ section .container .info p{
     flex-direction: column;
 }
 }
+/* .services .container .services-list{
+    background-color: brown;
+} */
