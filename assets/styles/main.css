@@ -19,6 +19,7 @@ html{
 }
 body{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: var(--alt-text-color);
 }
 ul{
     list-style: none;
@@ -43,11 +44,10 @@ img{
     margin: auto;
     width: min(1170px,(100% - 15px));
 }
-.main-color{background-color: var(--main-color);}
 .title-color{color: var(--title-color);}
 .text-color{color: var(--text-color);}
 .alt-text-color{color: var(--alttext-color);}
-.text-size{font-size: var(--text-size);}
+.main-color{background-color: var(--main-color);}
 h1{
     font-size: var(--h1-size);
 }
@@ -60,14 +60,13 @@ h3{
 h4{
     font-size: var(--h4-size);
 }
+.text-size{font-size: var(--text-size);}
 section{
     padding: 60px 0;
 }
 .flex{
     display: flex;
-    gap: 60px;
 }
 .grid{
     display: grid;
-    gap: 40px;
 }
