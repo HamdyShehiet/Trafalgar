@@ -68,7 +68,7 @@ h1{font-size: var(--h1-size);}
 h2{
     position: relative;
     font-size: var(--h2-size);
-    padding: 10px;
+    padding-bottom: 10px;
 }
 h3{font-size: var(--h3-size);}
 h4{font-size: var(--h4-size);}
@@ -76,16 +76,6 @@ h4{font-size: var(--h4-size);}
 
 .text-center{text-align: center;}
 
-.underline::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translateX(50%);
-    width: 50px;
-    height: 2px;
-    background-color: var(--title-color);
-}
 section{
     padding: 60px 0;
 }
@@ -106,8 +96,8 @@ header{
 }
 .section-btn{
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 20px;
+    padding: 15px 30px;
+    border-radius: 30px;
     font-size: var(--text-size);
 }
 header .container{
@@ -179,6 +169,18 @@ section .container  p.description{
     margin: 25px 0;
     line-height: 1.5;
 }
+section .container .info .underline::before{
+    left: 0;
+    bottom: 0;
+}
+.underline::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--title-color);
+}
 @media (min-width:992px) {
     section .container .info,
     section .container .image{
@@ -187,15 +189,24 @@ section .container  p.description{
 }
 @media (max-width:991px) {
     section .container{
-    flex-direction: column;
+        flex-direction: column;
+    }
 }
+.hero .container{
+    min-height: 100vh;
 }
 .services {
     position: relative;
 }
+.services .container .underline::before,
+.testimonials .container .underline::before{
+    right: 50%;
+    transform: translateX(50%);
+}
 .services .container .services-list{
     flex-wrap: wrap;
     gap: 20px;
+    margin-bottom: 20px;
 }
 .services .container .services-list .service{
     width: 300px;
@@ -210,4 +221,9 @@ section .container  p.description{
     top:50%;
     transform: translateY(-50%);
     z-index: -1;
+}
+.container .learn-more .section-btn{
+    margin:  20px 0 0 0;
+    border: 1px solid var(--bg-color);
+    color: var(--bg-color);
 }
