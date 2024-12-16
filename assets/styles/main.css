@@ -280,7 +280,7 @@ section .container .info .underline::before{
         grid-template-columns: 100%;
 }
 }
-/* .latest-articles .container .articles{
+.latest-articles .container .articles{
     flex-wrap: wrap;
     gap:30px ;
     margin: 45px 0;
@@ -299,4 +299,4 @@ section .container .info .underline::before{
     align-items: center;
     gap: 10px;
     color: var(--bg-color);
-} */
+}
